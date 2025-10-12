@@ -1,70 +1,198 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - EL ABED Hamdi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://picsum.photos/seed/portfolio/1920/1080.jpg') center/cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98) !important;
+        }
+        .portfolio-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-3px);
+        }
+        .btn-code {
+            background-color: #6db3f2;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 25px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-code:hover {
+            background-color: #5a9fd8;
+            transform: translateY(-3px);
+        }
+        .progress {
+            height: 10px;
+            border-radius: 10px;
+            background-color: #e9ecef;
+        }
+        .progress-bar {
+            border-radius: 10px;
+            background-color: #0d6efd;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: #0d6efd;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .contact-icon {
+            transition: transform 0.3s ease;
+        }
+        .contact-icon:hover {
+            transform: scale(1.1);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-5px);
+            color: #0d6efd !important;
+        }
+        .skill-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 5px solid white;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Hamdi EA</a>
+            <a class="navbar-brand fw-bold text-primary" href="#">Hamdi EA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section id="home" class="bg-primary text-white pt-5 pb-4">
-        <div class="container text-center pt-5">
-            <h1 class="display-4 fw-bold mb-4">Bonjour, je suis Hamdi EL ABED</h1>
-            <p class="lead mb-5">Étudiant en Informatique à l'INSA Hauts-de-France</p>
+
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Hi, I'm Hamdi EL ABED</h1>
+            <p class="lead mb-5">Computer Science Student at INSA Hauts-de-France</p>
             <div class="d-flex justify-content-center gap-3">
-                <a href="#portfolio" class="btn btn-outline-light btn-lg px-4">Voir mes projets</a>
-                <a href="#contact" class="btn btn-light btn-lg px-4">Me contacter</a>
+                <a href="#portfolio" class="btn btn-outline-light btn-lg px-4">View My Work</a>
+                <a href="#contact" class="btn btn-light btn-lg px-4">Contact Me</a>
             </div>
         </div>
     </section>
+
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">À propos de moi</h2>
+            <h2 class="text-center section-title">About Me</h2>
             <div class="row align-items-center">
-                <div class="col-md-5 mb-4 mb-md-0">
-                    <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 300px;">
-                        <i class="bi bi-person-circle text-primary" style="font-size: 8rem;"></i>
-                    </div>
+                <div class="col-md-5 mb-4 mb-md-0 text-center">
+                    <img src="profile.jpg" alt="Profile" class="profile-img">
                 </div>
                 <div class="col-md-7">
-                    <p class="lead">Étudiant en Licence Informatique à l'INSA Hauts-de-France avec de solides compétences en développement web, bases de données et intelligence artificielle.</p>
-                    <p>Recherche un stage en développement web ou en intelligence artificielle.</p>
+                    <p class="lead">Computer Science student at INSA Hauts-de-France with strong skills in web development, databases, and artificial intelligence.</p>
+                    <p>Looking for an internship in web development or AI.</p>
                     <div class="row mt-4">
                         <div class="col-sm-6 mb-3">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-person-fill text-primary me-2 fs-5"></i>
-                                <div><strong>Nom:</strong> EL ABED Hamdi</div>
+                                <div><strong>Name:</strong> EL ABED Hamdi</div>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-3">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-telephone-fill text-primary me-2 fs-5"></i>
-                                <div><strong>Téléphone:</strong> 0775726724</div>
+                                <div><strong>Phone:</strong> 0775726724</div>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-3">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-geo-alt-fill text-primary me-2 fs-5"></i>
-                                <div><strong>Localisation:</strong> FAMARS 59300, Valenciennes</div>
+                                <div><strong>Location:</strong> FAMARS 59300, Valenciennes</div>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-3">
@@ -78,34 +206,29 @@
             </div>
         </div>
     </section>
+
     <section id="skills" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Compétences</h2>
+            <h2 class="text-center section-title">Skills</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-1">
                             <span class="fw-semibold">HTML/CSS</span><span>75%</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        <div class="progress"><div class="progress-bar" data-width="75"></div></div>
                     </div>
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-1">
                             <span class="fw-semibold">JavaScript</span><span>45%</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        <div class="progress"><div class="progress-bar" data-width="45"></div></div>
                     </div>
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-1">
                             <span class="fw-semibold">React</span><span>40%</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        <div class="progress"><div class="progress-bar" data-width="40"></div></div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -113,142 +236,158 @@
                         <div class="d-flex justify-content-between mb-1">
                             <span class="fw-semibold">PHP</span><span>65%</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        <div class="progress"><div class="progress-bar" data-width="65"></div></div>
                     </div>
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-1">
-                            <span class="fw-semibold">Gestion de bases de données</span><span>60%</span>
+                            <span class="fw-semibold">Database Management</span><span>60%</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        <div class="progress"><div class="progress-bar" data-width="60"></div></div>
                     </div>
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-1">
                             <span class="fw-semibold">TypeScript</span><span>35%</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        <div class="progress"><div class="progress-bar" data-width="35"></div></div>
                     </div>
                 </div>
             </div>
             
             <div class="row mt-4">
                 <div class="col-12">
-                    <h4 class="mb-3 text-center">Compétences techniques</h4>
+                    <h4 class="mb-3 text-center">Technical Skills</h4>
                     <div class="text-center">
-                        <span class="badge bg-primary m-1">JavaScript</span>
-                        <span class="badge bg-primary m-1">TypeScript</span>
-                        <span class="badge bg-primary m-1">HTML/CSS</span>
-                        <span class="badge bg-primary m-1">Tailwind CSS</span>
-                        <span class="badge bg-primary m-1">React</span>
-                        <span class="badge bg-primary m-1">Vite</span>
-                        <span class="badge bg-primary m-1">PHP</span>
-                        <span class="badge bg-primary m-1">Microsoft Access</span>
-                        <span class="badge bg-primary m-1">phpMyAdmin</span>
-                        <span class="badge bg-primary m-1">GitHub</span>
-                        <span class="badge bg-primary m-1">VS Code</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">Cascading Style Sheets (CSS)</span>
+                        <span class="skill-tag">API Development</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Bootstrap (Framework)</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">C (Programming Language)</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Microsoft Access</span>
+                        <span class="skill-tag">phpMyAdmin</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
                     </div>
                 </div>
                 
                 <div class="col-12 mt-4">
-                    <h4 class="mb-3 text-center">Langues</h4>
+                    <h4 class="mb-3 text-center">Languages</h4>
                     <div class="text-center">
-                        <span class="badge bg-success m-1">Anglais (C1)</span>
-                        <span class="badge bg-success m-1">Français (Professionnel)</span>
-                        <span class="badge bg-success m-1">Arabe (Langue maternelle)</span>
-                        <span class="badge bg-success m-1">Allemand (Débutant)</span>
+                        <span class="skill-tag">English (C1)</span>
+                        <span class="skill-tag">French (Professional)</span>
+                        <span class="skill-tag">Arabic (Native)</span>
+                        <span class="skill-tag">German (Beginner)</span>
                     </div>
                 </div>
                 
                 <div class="col-12 mt-4">
-                    <h4 class="mb-3 text-center">Compétences interpersonnelles</h4>
+                    <h4 class="mb-3 text-center">Soft Skills</h4>
                     <div class="text-center">
-                        <span class="badge bg-info m-1">Travail d'équipe</span>
-                        <span class="badge bg-info m-1">Leadership</span>
-                        <span class="badge bg-info m-1">Résolution de problèmes</span>
-                        <span class="badge bg-info m-1">Communication</span>
-                        <span class="badge bg-info m-1">Adaptabilité</span>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Adaptability</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="portfolio" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Portfolio</h2>
+            <h2 class="text-center section-title">Portfolio</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="logo (1).jpg" class="card-img-top" alt="Aventure Étudiant">
+                        <img src="https://z-cdn-media.chatglm.cn/files/30a966eb-f879-422b-9f40-4e1ef99f92f3_logo%20%281%29.jpg?auth_key=1791735101-38ba223a8df940c785fc4db3175fed7a-0-308e21114f0d5d35d16dba3e54088099" class="card-img-top portfolio-img" alt="Aventure Étudiant">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Aventure Étudiant</h5>
-                            <p class="card-text">Site web pour étudiants internationaux (HTML, CSS, PHP, JS, phpMyAdmin)</p>
+                            <p class="card-text">Website for international students (HTML, CSS, PHP, JS, phpMyAdmin)</p>
                             <div class="mt-auto">
-                                <a href="https://github.com/HamdiEA/Aventure-Etudiant" class="btn btn-primary">Voir le projet</a>
+                                <a href="https://github.com/HamdiEA/Aventure-Etudiant" class="btn btn-primary">View Project</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="logo.png" class="card-img-top" alt="Vitesse Auto">
+                        <img src="https://z-cdn-media.chatglm.cn/files/fbeec728-df1f-407e-bd68-9c33cfd6d6a9_logo.png?auth_key=1791735101-7e7a8be02bbb441d82758a1114ba177c-0-a3ef42823eaaff69c813c8794f794df6" class="card-img-top portfolio-img" alt="Vitesse Auto">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Vitesse Auto</h5>
-                            <p class="card-text">Application web full-stack (HTML, JS, CSS)</p>
+                            <p class="card-text">Full-stack web application (HTML, JS, CSS)</p>
                             <div class="mt-auto">
-                                <a href="https://github.com/HamdiEA/Vitesse-Auto" class="btn btn-primary">Voir le projet</a>
+                                <a href="https://github.com/HamdiEA/Vitesse-Auto" class="btn btn-primary">View Project</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="R (2).jpg" class="card-img-top" alt="Forza Horizon 4 Database">
+                        <img src="https://z-cdn-media.chatglm.cn/files/2d0d6bba-b494-497e-95d8-a57252443eca_R%20%282%29.jpg?auth_key=1791735101-b9012820d35c4a3c9de3aa873474cff7-0-068a7604cc9a61b0937dfdd90ff63f87" class="card-img-top portfolio-img" alt="Forza Horizon 4 Database">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Forza Horizon 4 Database</h5>
-                            <p class="card-text">Base de données Microsoft Access avec 20 requêtes SQL</p>
+                            <p class="card-text">Microsoft Access database with 20 SQL queries</p>
                             <div class="mt-auto">
-                                <a href="https://github.com/HamdiEA/Data-Base-Forza-Horizon-4" class="btn btn-primary">Voir le projet</a>
+                                <a href="https://github.com/HamdiEA/Data-Base-Forza-Horizon-4" class="btn btn-primary">View Project</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="R (1).png" class="card-img-top" alt="Formulaire JS">
+                        <img src="https://z-cdn-media.chatglm.cn/files/260cd289-52b8-4463-83a9-3b075bcdf30c_R%20%281%29.png?auth_key=1791735435-59a3d331c0014f2983f810645415f6d5-0-c152f9d2fac58324a00656124bf7d86c" class="card-img-top portfolio-img" alt="Formulaire JS">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Formulaire JS</h5>
-                            <p class="card-text">Projet JavaScript pour manipulation DOM et validation de formulaires</p>
+                            <p class="card-text">JavaScript project for DOM manipulation and form validation</p>
                             <div class="mt-auto">
-                                <a href="https://github.com/HamdiEA/Formulaire" class="btn btn-primary">Voir le projet</a>
+                                <a href="https://github.com/HamdiEA/Formulaire" class="btn btn-primary">View Project</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="wise-logo.jpg" class="card-img-top" alt="The Wise Restaurant">
+                        <img src="https://z-cdn-media.chatglm.cn/files/a195b3a0-75f9-4e21-a54b-d0396bf5f92c_wise-logo.jpg?auth_key=1791735101-98b26e77639341ac96430710b4cebf9d-0-b130f3b8fa14679e48fecdf526b3da50" class="card-img-top portfolio-img" alt="The Wise Restaurant">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">The Wise Restaurant</h5>
-                            <p class="card-text">Site statique (React, Vite, Tailwind CSS) - 2025-09</p>
-                            <div class="mt-auto">
-                                <a href="https://github.com/HamdiEA/thewiserestaurant" class="btn btn-primary">Voir le projet</a>
+                            <h5 class="card-title">The Wise Restaurant Website</h5>
+                            <p class="card-text">Static website (TypeScript, Node.js, React.js) - 2025-09</p>
+                            <div class="mt-auto d-flex gap-2">
+                                <a href="https://thewisrerestaurants.com" class="btn btn-primary">View Site</a>
+                                <a href="https://github.com/HamdiEA/thewiserestaurant" class="btn btn-code">View Code</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="wise-logo.jpg" class="card-img-top" alt="The Wise AI">
+                        <img src="https://z-cdn-media.chatglm.cn/files/797e03e6-2c39-438a-a88e-2691af42e8d6_wise-logo.jpg?auth_key=1791735101-b83492c19ae340adb67900a5f28b8093-0-01beeb477267a987f778aa8e3aaca359" class="card-img-top portfolio-img" alt="The Wise AI">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">The Wise AI</h5>
-                            <p class="card-text">Version améliorée avec API d'IA et backend proxy</p>
+                            <h5 class="card-title">The Wise AI Website</h5>
+                            <p class="card-text">Enhanced version with AI API and backend proxy</p>
                             <div class="mt-auto">
-                                <a href="https://github.com/HamdiEA/the-wise-ai" class="btn btn-primary">Voir le projet</a>
+                                <a href="https://github.com/HamdiEA/the-wise-ai" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/portfolio/400/300.jpg" alt="Portfolio" class="card-img-top portfolio-img">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Portfolio</h5>
+                            <p class="card-text">Personal portfolio (HTML, Bootstrap)</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/portfulioEA" class="btn btn-primary">View Project</a>
                             </div>
                         </div>
                     </div>
@@ -256,26 +395,23 @@
             </div>
         </div>
     </section>
+
     <section id="experience" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Expérience</h2>
+            <h2 class="text-center section-title">Experience</h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <h5 class="card-title">Gérant & Développeur Web</h5>
-                                    <h6 class="card-subtitle text-muted">The Wise Restaurant</h6>
-                                    <p class="text-muted small"><i class="bi bi-geo-alt-fill me-1"></i>Ksar Hellal, Monastir, Tunisie 5050</p>
+                                    <h5 class="card-title">Inventory Clerk</h5>
+                                    <h6 class="card-subtitle text-muted">RGIS Valenciennes</h6>
+                                    <p class="text-muted small mb-2"><i class="bi bi-geo-alt-fill me-1"></i>Valenciennes Mont Houy 59300</p>
                                 </div>
-                                <span class="badge bg-primary">Nov 2020 - Déc 2022</span>
+                                <span class="badge bg-primary">Apr 2024 - Present</span>
                             </div>
-                            <ul class="card-text">
-                                <li>Gestion des commandes, de la caisse et de la communication sur les réseaux sociaux</li>
-                                <li>Création et maintenance du site web (React, Vite, Tailwind CSS, API IA)</li>
-                                <li>Développement de compétences en leadership et en gestion de projet</li>
-                            </ul>
+                            <p class="card-text">Counting and verification of stocks. Improved skills in precision and reactivity.</p>
                         </div>
                     </div>
                 </div>
@@ -284,34 +420,31 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <h5 class="card-title">Inventoriste</h5>
-                                    <h6 class="card-subtitle text-muted">RGIS Valenciennes</h6>
-                                    <p class="text-muted small"><i class="bi bi-geo-alt-fill me-1"></i>Valenciennes Mont Houy 59300</p>
+                                    <h5 class="card-title">Manager & Web Developer</h5>
+                                    <h6 class="card-subtitle text-muted">The Wise Restaurant</h6>
+                                    <p class="text-muted small mb-2"><i class="bi bi-geo-alt-fill me-1"></i>Tunisie, Monastir, Ksar Hellal 5050</p>
                                 </div>
-                                <span class="badge bg-primary">Avr 2024 - Présent</span>
+                                <span class="badge bg-primary">Nov 2020 - Dec 2022</span>
                             </div>
-                            <ul class="card-text">
-                                <li>Comptage et vérification des stocks</li>
-                                <li>Amélioration des compétences en précision et réactivité</li>
-                            </ul>
+                            <p class="card-text">Complete management of the restaurant and development of its website using React, Vite, Tailwind CSS, and AI API. Developed leadership and project management skills.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <h2 class="text-center mb-5 mt-5">Formation</h2>
+            <h2 class="text-center section-title mt-5">Education</h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <h5 class="card-title">Licence Informatique</h5>
+                                    <h5 class="card-title">Bachelor's in Computer Science</h5>
                                     <h6 class="card-subtitle text-muted">INSA Hauts-de-France</h6>
                                 </div>
-                                <span class="badge bg-primary">2023 - Présent</span>
+                                <span class="badge bg-primary">2023 - Present</span>
                             </div>
-                            <p class="card-text">Moyenne (L1-L2) : 14.3/20</p>
+                            <p class="card-text">Average (L1-L2): 14.3/20</p>
                         </div>
                     </div>
                 </div>
@@ -320,46 +453,61 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <h5 class="card-title">Baccalauréat Mathématiques</h5>
+                                    <h5 class="card-title">Mathematics Baccalaureate</h5>
                                     <h6 class="card-subtitle text-muted">Lycée Said Bu Baker</h6>
                                 </div>
                                 <span class="badge bg-primary">2022</span>
                             </div>
-                            <p class="card-text">Mention Bien | Moknine, Monastir, 5050 Tunisie</p>
+                            <p class="card-text">Honors | Moknine, Monastir, 5050 Tunisie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title">English Certificate</h5>
+                                    <h6 class="card-subtitle text-muted">American Academy of English</h6>
+                                </div>
+                                <span class="badge bg-primary">Dec 2022 - Mar 2023</span>
+                            </div>
+                            <p class="card-text">English language certification</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Contact</h2>
+            <h2 class="text-center section-title">Contact Me</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card">
+                    <div class="card border-0 shadow">
                         <div class="card-body p-4">
                             <div class="row g-4">
                                 <div class="col-md-4 text-center">
-                                    <div class="d-flex flex-column align-items-center">
-                                        <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
-                                        <h5>Localisation</h5>
-                                        <p>FAMARS 59300, Valenciennes, France</p>
+                                    <div class="contact-icon bg-light rounded-circle p-3 d-inline-block mb-3">
+                                        <i class="bi bi-geo-alt-fill text-primary fs-1"></i>
                                     </div>
+                                    <h5>Location</h5>
+                                    <p>FAMARS 59300, Valenciennes, France</p>
                                 </div>
                                 <div class="col-md-4 text-center">
-                                    <div class="d-flex flex-column align-items-center">
-                                        <i class="bi bi-envelope-fill text-primary fs-1 mb-3"></i>
-                                        <h5>Email</h5>
-                                        <p>hamdielabedtn1@gmail.com</p>
+                                    <div class="contact-icon bg-light rounded-circle p-3 d-inline-block mb-3">
+                                        <i class="bi bi-envelope-fill text-primary fs-1"></i>
                                     </div>
+                                    <h5>Email</h5>
+                                    <p>hamdielabedtn1@gmail.com</p>
                                 </div>
                                 <div class="col-md-4 text-center">
-                                    <div class="d-flex flex-column align-items-center">
-                                        <i class="bi bi-telephone-fill text-primary fs-1 mb-3"></i>
-                                        <h5>Téléphone</h5>
-                                        <p>0775726724</p>
+                                    <div class="contact-icon bg-light rounded-circle p-3 d-inline-block mb-3">
+                                        <i class="bi bi-telephone-fill text-primary fs-1"></i>
                                     </div>
+                                    <h5>Phone</h5>
+                                    <p>0775726724</p>
                                 </div>
                             </div>
                         </div>
@@ -368,18 +516,84 @@
             </div>
         </div>
     </section>
+
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <div class="mb-3">
-                <a href="https://github.com/HamdiEA" class="text-white me-3"><i class="bi bi-github fs-4"></i></a>
-                <a href="https://www.linkedin.com/in/hamdiea/" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-globe fs-4"></i></a>
+                <a href="https://github.com/HamdiEA" class="social-icon text-white me-3"><i class="bi bi-github fs-4"></i></a>
+                <a href="https://www.linkedin.com/in/hamdiea/" class="social-icon text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                <a href="https://portfulioea.netlify.app/" class="social-icon text-white"><i class="bi bi-globe fs-4"></i></a>
             </div>
-            <p class="mb-0">&copy; 2023 EL ABED Hamdi. Tous droits réservés.</p>
-            <p class="mb-0">Dernière mise à jour : 11 Octobre 2025</p>
+            <p class="mb-0">&copy; 2023 EL ABED Hamdi. All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        const skillsSection = document.getElementById('skills');
+        const progressBars = document.querySelectorAll('.progress-bar');
+        
+        const animateProgressBars = () => {
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+            });
+        };
+        const checkSkillsVisibility = () => {
+            const rect = skillsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                animateProgressBars();
+                window.removeEventListener('scroll', checkSkillsVisibility);
+            }
+        };
+
+        window.addEventListener('scroll', checkSkillsVisibility);
+        checkSkillsVisibility();
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-

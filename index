@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - EL ABED Hamdi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Hamdi EA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="bg-primary text-white py-5">
+        <div class="container text-center pt-5">
+            <h1 class="display-4 fw-bold mb-4">Hi, I'm Hamdi EL ABED</h1>
+            <p class="lead mb-5">Computer Science Student at INSA Hauts-de-France</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#portfolio" class="btn btn-outline-light btn-lg px-4">View My Work</a>
+                <a href="#contact" class="btn btn-light btn-lg px-4">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0 text-center">
+                    <img src="Design sans titre (2).png" alt="Profile" class="img-fluid rounded mt-3">
+                </div>
+                <div class="col-md-7">
+                    <p class="lead">Computer Science student at INSA Hauts-de-France with strong skills in web development, databases, and artificial intelligence.</p>
+                    <p>Looking for an internship in web development or AI.</p>
+                    <div class="row mt-4">
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-2 fs-5"></i>
+                                <div><strong>Name:</strong> EL ABED Hamdi</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-telephone-fill text-primary me-2 fs-5"></i>
+                                <div><strong>Phone:</strong> 0775726724</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-geo-alt-fill text-primary me-2 fs-5"></i>
+                                <div><strong>Location:</strong> FAMARS 59300, Valenciennes</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-primary me-2 fs-5"></i>
+                                <div><strong>Email:</strong> hamdielabedtn1@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Skills</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">HTML/CSS</span><span>75%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">JavaScript</span><span>45%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" style="width: 45%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">React</span><span>40%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" style="width: 40%"></div></div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">PHP</span><span>65%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" style="width: 65%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">Database Management</span><span>60%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" style="width: 60%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">TypeScript</span><span>35%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" style="width: 35%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h4 class="mb-3 text-center">Technical Skills</h4>
+                    <div class="text-center">
+                        <span class="badge bg-primary m-1">JavaScript</span>
+                        <span class="badge bg-primary m-1">HTML</span>
+                        <span class="badge bg-primary m-1">Cascading Style Sheets (CSS)</span>
+                        <span class="badge bg-primary m-1">API Development</span>
+                        <span class="badge bg-primary m-1">Java</span>
+                        <span class="badge bg-primary m-1">MATLAB</span>
+                        <span class="badge bg-primary m-1">Git</span>
+                        <span class="badge bg-primary m-1">TypeScript</span>
+                        <span class="badge bg-primary m-1">Bootstrap (Framework)</span>
+                        <span class="badge bg-primary m-1">Vue.js</span>
+                        <span class="badge bg-primary m-1">C (Programming Language)</span>
+                        <span class="badge bg-primary m-1">Tailwind CSS</span>
+                        <span class="badge bg-primary m-1">React</span>
+                        <span class="badge bg-primary m-1">Node.js</span>
+                        <span class="badge bg-primary m-1">PHP</span>
+                        <span class="badge bg-primary m-1">Microsoft Access</span>
+                        <span class="badge bg-primary m-1">phpMyAdmin</span>
+                        <span class="badge bg-primary m-1">GitHub</span>
+                        <span class="badge bg-primary m-1">VS Code</span>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <h4 class="mb-3 text-center">Languages</h4>
+                    <div class="text-center">
+                        <span class="badge bg-primary m-1">English (C1)</span>
+                        <span class="badge bg-primary m-1">French (Professional)</span>
+                        <span class="badge bg-primary m-1">Arabic (Native)</span>
+                        <span class="badge bg-primary m-1">German (Beginner)</span>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <h4 class="mb-3 text-center">Soft Skills</h4>
+                    <div class="text-center">
+                        <span class="badge bg-primary m-1">Teamwork</span>
+                        <span class="badge bg-primary m-1">Leadership</span>
+                        <span class="badge bg-primary m-1">Problem Solving</span>
+                        <span class="badge bg-primary m-1">Communication</span>
+                        <span class="badge bg-primary m-1">Adaptability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Portfolio</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="logo (1).jpg" class="card-img-top" alt="Aventure Étudiant">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aventure Étudiant</h5>
+                            <p class="card-text">Website for international students (HTML, CSS, PHP, JS, phpMyAdmin)</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/Aventure-Etudiant" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="logo.png" class="card-img-top" alt="Vitesse Auto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Vitesse Auto</h5>
+                            <p class="card-text">Full-stack web application (HTML, JS, CSS)</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/Vitesse-Auto" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="R (2).jpg" class="card-img-top" alt="Forza Horizon 4 Database">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Forza Horizon 4 Database</h5>
+                            <p class="card-text">Microsoft Access database with 20 SQL queries</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/Data-Base-Forza-Horizon-4" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="R (1).png" class="card-img-top" alt="Formulaire JS">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Formulaire JS</h5>
+                            <p class="card-text">JavaScript project for DOM manipulation and form validation</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/Formulaire" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="wise-logo.jpg" class="card-img-top" alt="The Wise Restaurant">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">The Wise Restaurant Website</h5>
+                            <p class="card-text">Static website (TypeScript, Node.js, React.js) - 2025-09</p>
+                            <div class="mt-auto d-flex gap-2">
+                                <a href="https://thewisrerestaurants.com" class="btn btn-primary">View Site</a>
+                                <a href="https://github.com/HamdiEA/thewiserestaurant" class="btn btn-primary">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="wise-logo.jpg" class="card-img-top" alt="The Wise AI">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">The Wise AI Website</h5>
+                            <p class="card-text">Enhanced version with AI API and backend proxy</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/the-wise-ai" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="bootstrap-5-layout (1).jpg" alt="Portfolio" class="card-img-top mt-2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Portfolio</h5>
+                            <p class="card-text">Personal portfolio (HTML, Bootstrap)</p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/HamdiEA/portfulioEA" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Experience</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title">Inventory Clerk</h5>
+                                    <h6 class="card-subtitle text-muted">RGIS Valenciennes</h6>
+                                    <p class="text-muted small mb-2"><i class="bi bi-geo-alt-fill me-1"></i>Valenciennes Mont Houy 59300</p>
+                                </div>
+                                <span class="badge bg-primary">Apr 2024 - Present</span>
+                            </div>
+                            <p class="card-text">Counting and verification of stocks. Improved skills in precision and reactivity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title">Manager & Web Developer</h5>
+                                    <h6 class="card-subtitle text-muted">The Wise Restaurant</h6>
+                                    <p class="text-muted small mb-2"><i class="bi bi-geo-alt-fill me-1"></i>Tunisie, Monastir, Ksar Hellal 5050</p>
+                                </div>
+                                <span class="badge bg-primary">Nov 2020 - Dec 2022</span>
+                            </div>
+                            <p class="card-text">Complete management of the restaurant and development of its website using React, Vite, Tailwind CSS, and AI API. Developed leadership and project management skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center mb-5 mt-5">Education</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title">Bachelor's in Computer Science</h5>
+                                    <h6 class="card-subtitle text-muted">INSA Hauts-de-France</h6>
+                                </div>
+                                <span class="badge bg-primary">2023 - Present</span>
+                            </div>
+                            <p class="card-text">Average (L1-L2): 14.3/20</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title">Mathematics Baccalaureate</h5>
+                                    <h6 class="card-subtitle text-muted">Lycée Said Bu Baker</h6>
+                                </div>
+                                <span class="badge bg-primary">2022</span>
+                            </div>
+                            <p class="card-text">Honors | Moknine, Monastir, 5050 Tunisie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title">English Certificate</h5>
+                                    <h6 class="card-subtitle text-muted">American Academy of English</h6>
+                                </div>
+                                <span class="badge bg-primary">Dec 2022 - Mar 2023</span>
+                            </div>
+                            <p class="card-text">English language certification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="row g-4">
+                                <div class="col-md-4 text-center">
+                                    <div class="bg-light rounded-circle p-3 d-inline-block mb-3">
+                                        <i class="bi bi-geo-alt-fill text-primary fs-1"></i>
+                                    </div>
+                                    <h5>Location</h5>
+                                    <p>FAMARS 59300, Valenciennes, France</p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="bg-light rounded-circle p-3 d-inline-block mb-3">
+                                        <i class="bi bi-envelope-fill text-primary fs-1"></i>
+                                    </div>
+                                    <h5>Email</h5>
+                                    <p>hamdielabedtn1@gmail.com</p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="bg-light rounded-circle p-3 d-inline-block mb-3">
+                                        <i class="bi bi-telephone-fill text-primary fs-1"></i>
+                                    </div>
+                                    <h5>Phone</h5>
+                                    <p>0775726724</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="https://github.com/HamdiEA" class="text-white me-3"><i class="bi bi-github fs-4"></i></a>
+                <a href="https://www.linkedin.com/in/hamdiea/" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                <a href="https://portfulioea.netlify.app/" class="text-white"><i class="bi bi-globe fs-4"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2023 EL ABED Hamdi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
